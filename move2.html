@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>Title Page</title>
+		<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> --><!-- css bootstrap -->
+		<!-- <link rel="stylesheet" href="css/main.css" type="text/css"> --><!--css連結方式-->
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script><!--js連結方式-->
+		<!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> --><!-- js bootstrap -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--適應性-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge;IE=11;IE=10;IE=9;IE=8">
+		<!--[if lt IE 9]>
+		  <script type="text/javascript" src="js/html5shiv.js"></script>
+		  <script type="text/javascript" src="js/respond.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.wrap{ width: 100%;position: relative; background:#fff;}
+			.content{ width: 80%; margin: 0 auto; ; }
+			.schedule{ width: 100%; height: 20px; padding:  0; background: #d9d8d7; border-radius: 20px}
+			.line_schedule{width: 0; height:20px; background: #fd6b72; border-radius: 20px }
+		</style> 
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="content">
+				<div class="schedule">
+					<div class="line_schedule"></div>
+				</div>
+			</div>
+		</div>
+
+		
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$(".line_schedule").stop().animate({"width":"75%"},2000)
+
+		});
+	</script>
+</html>
