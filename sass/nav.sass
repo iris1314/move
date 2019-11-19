@@ -1,0 +1,323 @@
+@charset "utf-8"
+
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, img
+  border: medium none
+  margin: 0
+  padding: 0
+
+html
+  -webkit-text-size-adjust: none
+  font-family: PingFang TC, "微軟正黑體", "Microsoft JhengHei", Arial,sans-serif
+  font-size: 16px
+  height: 100%
+  color: #000
+
+body
+  font-family: PingFang TC, "微軟正黑體", "Microsoft JhengHei", Arial,sans-serif
+  font-size: 16px
+  height: 100%
+  color: #000
+  position: relative
+
+main
+  width: 100%
+  padding: 94px 0 50px
+  margin: 0 auto
+
+select, option
+  -webkit-appearance: none
+
+.displayTable
+  display: table
+
+.clear
+  clear: both
+  overflow: hidden
+
+.floatL
+  float: left
+
+.floatR
+  float: right
+
+.arial
+  font-family: Arial, sans-serif
+
+
+input
+  &[type="radio"]
+    margin: 4px 0 0
+    margin-top: 1px \9
+    line-height: normal
+
+  &[type="checkbox"]
+    margin: 4px 0 0
+    margin-top: 1px \9
+    line-height: normal
+    padding: 0
+    box-sizing: border-box
+    vertical-align: top
+
+  &[type="radio"]
+    padding: 0
+    box-sizing: border-box
+    vertical-align: top
+
+  margin: 0
+  padding: 0
+  letter-spacing: 0
+  word-spacing: 0
+
+  placeholder
+    color: #a08c54
+
+\::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder
+  color: #a08c54
+
+.boxSizing
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
+  box-sizing: border-box
+
+.wrap
+  width: 1200px
+  margin: 0 auto
+
+nav
+  width: 100%
+  height: 120px
+  font-family: 'Noto Serif TC', serif
+  background: #fdc22a
+  padding: 20px 0
+  position: fixed
+  top: 0
+  z-index: 10
+  display: block
+
+#menu
+  width: 1000px
+  margin: 0 auto
+  font-size: 1em
+  position: relative
+  display: table
+
+  h1
+    display: inline-block
+
+    img
+      height: 80px
+
+#menu_mobile
+  display: none
+
+#menu ul
+  float: right
+  padding: 0
+  margin: 0
+  text-align: center
+
+  li
+    list-style: none
+    display: inline-block
+    position: relative
+    line-height: 80px
+    overflow: hidden
+    color: #fff
+    font-size: 1.2em
+    font-weight: 800
+    margin: 0 20px
+
+    a
+      color: #000
+      text-decoration: none
+      display: block
+      margin: 0
+      padding: 0
+
+      &:before
+        content: ""
+        width: 0
+        height: 1px
+        position: absolute
+        bottom: 10px
+        background: #000
+        display: block
+
+    &:hover a:before
+      width: 100%
+      height: 1px
+      bottom: 10px
+      -webkit-transition: all ease-out 0.3s
+      transition: all ease-out 0.3s
+
+    &.active a:before
+      width: 100%
+      height: 1px
+      background: #000
+      bottom: 10px
+
+
+#menu_story, #menu_prod, #menu_salon, #menu_member, #menu_contact, #menu_bag, #menu_search, #menu_design
+  margin-left: 57px
+
+#menu ul li
+  &#menu_bag
+    width: 30px
+    height: 90px
+    background: url(../images/icon_bag.png) no-repeat center 45%
+    background-size: 55%
+    font-size: 0
+    cursor: pointer
+
+  &#menu_search
+    width: 30px
+    height: 90px
+    background: url(../images/icon_search.png) no-repeat center 45%
+    background-size: 55%
+    font-size: 0
+    cursor: pointer
+
+  &#menu_design
+    width: 20px
+    text-align: center
+    font-family: Arial, Helvetica, sans-serif
+    font-weight: bold
+
+#menu_logo a img
+  height: auto
+  vertical-align: middle
+
+article
+  width: 100%
+
+section
+  width: 100%
+  margin: 0 auto
+
+
+
+
+
+@media screen and (max-width: 1199px)
+  #menu
+    width: 98%
+    margin: 0 auto
+    font-size: 1em
+    position: relative
+    display: table
+
+@media screen and (max-width: 992px)
+  body
+    position: relative
+
+  main
+    width: 95%
+    padding: 50px 0
+    margin: 0 auto
+
+  nav
+    display: none
+
+  #menu_mobile
+    width: 100%
+    height: auto
+    margin: 0 auto
+    font-size: 1em
+    position: relative
+    display: block
+
+  #mobile_controlboxArea
+    width: 100%
+    height: 60px
+    padding: 10px 0
+    background: #fdc22a
+    position: fixed
+    z-index: 21
+    top: 0
+    left: 0
+
+  #mobile_menu_labIcon
+    position: absolute
+    left: 5%
+    top: 15px
+
+  #mobile_menu_logo
+    width: auto
+    height: 40px
+    text-align: center
+    background: #fdc22a
+
+    img
+      width: auto
+      height: 100%
+
+  #mobile_menulist
+    width: 100%
+    height: 100%
+    background: #fdc22a
+    position: fixed
+    z-index: 20
+    top: -100%
+    overflow: auto
+
+    .mobileMenu_list
+      width: 90%
+      height: 300px
+      overflow: auto
+      margin: 0 auto
+      position: relative
+
+      ul
+        width: 100%
+        list-style: none
+        padding: 10px 0
+        position: absolute
+        top: 0
+
+      li
+        width: 100%
+        margin: 0 auto
+        height: 40px
+        line-height: 40px
+        border-bottom: 1px solid #000
+        color: #000
+        font-size: 1em
+        text-align: center
+
+      ul li a
+        color: #000
+        text-decoration: none
+        display: block
+
+  .hamburger
+    .line
+      width: 30px
+      height: 3px
+      background-color: #000
+      display: block
+      margin: 6px auto
+      -webkit-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      transition: all 0.3s ease-in-out
+
+    &:hover
+      cursor: pointer
+
+
+  #hamburger-1.is-active .line
+    &:nth-child(2)
+      opacity: 0
+
+    &:nth-child(1)
+      -webkit-transform: translateY(9px) rotate(45deg)
+      -ms-transform: translateY(9px) rotate(45deg)
+      -o-transform: translateY(9px) rotate(45deg)
+      transform: translateY(9px) rotate(45deg)
+
+    &:nth-child(3)
+      -webkit-transform: translateY(-9px) rotate(-45deg)
+      -ms-transform: translateY(-9px) rotate(-45deg)
+      -o-transform: translateY(-9px) rotate(-45deg)
+      transform: translateY(-9px) rotate(-45deg)
